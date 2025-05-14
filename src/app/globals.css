@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+.swiper-pagination{
+  bottom: 0;
+}
+.swiper-pagination-bullet {
+  background-color: #d1d1d1;
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  border-radius: 9999px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #facc15 !important; /* yellow-400 */
+  width: 24px !important;
+  border-radius: 9999px;
+}
+ .menu-dropdown {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.menu:hover .menu-dropdown {
+  opacity: 1 !important;
+}
+
