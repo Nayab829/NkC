@@ -46,7 +46,7 @@ const Header = () => {
                 { text: "About Us", link: "/about" },
                 { text: "Services", link: "/services" },
                 { text: "Projects", link: "/projects" },
-                { text: "Contact Us", link: "/contact" },
+                { text: "Contact Us", link: "/contact-us" },
               ].map((item, index) => {
                 return (
                   <li
@@ -76,7 +76,7 @@ const Header = () => {
               { text: "About Us", link: "/about" },
               { text: "Services", link: "/services" },
               { text: "Projects", link: "/projects" },
-              { text: "Contact Us", link: "/contact" },
+              { text: "Contact Us", link: "/contact-us" },
             ].map((item, index) => {
               return (
                 <li
