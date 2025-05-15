@@ -8,7 +8,7 @@ export default function GetQuote() {
       {/* Text Section */}
       <div className="max-w-xl">
         <h2 className="text-3xl font-semibold text-gray-800 mb-4">
-          Get <span className="text-blue-600">an estimate</span>
+          Get <span className="text-secondary">an estimate</span>
         </h2>
         <p className="text-gray-700 mb-4">
           Ready to switch to solar? Let’s make it simple!

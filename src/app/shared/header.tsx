@@ -3,23 +3,20 @@
 import { useState } from "react";
 
 import Image from "next/image";
-import {
-  FaSearch,
-  FaTimes,
-  FaBars,
-} from "react-icons/fa";
+import { FaSearch, FaTimes, FaBars } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import { LuUserRound } from "react-icons/lu";
 import { IoSearch } from "react-icons/io5";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import Link from "next/link";
 
 const Header = () => {
   const [category, setCategory] = useState("All Categories");
   const [showSearch, setShowSearch] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className="px-4 md:px-14">
+    <div className="px-4 max-w-7xl mx-auto">
       {/* Top Contact Bar */}
       {/* <div className="bg-gray-100 text-sm py-2 px-4 flex justify-between text-gray-700">
         <div>
@@ -39,25 +36,25 @@ const Header = () => {
       {/* Main Nav */}
       <div className="flex items-center justify-between py-4 border-b border-gray-200 relative">
         {/* menu on  mobile */}
-        <div className="relative">
-          <FaBars size={20} onClick={()=> setShowMenu(!showMenu)}/>
+        <div className="relative md:hidden">
+          <FaBars size={20} onClick={() => setShowMenu(!showMenu)} />
           {showMenu && (
             <ul className="bg-white absolute left-0 top-full mt-2 w-[200px] p-2 shadow-2xl rounded-xl transition-all duration-300">
               {[
-                { text: "Home" },
-                { text: "Shop" },
-                { text: "About Us" },
-                { text: "Services" },
-                { text: "Projects" },
-                { text: "Contact Us" },
+                { text: "Home", link: "/" },
+                { text: "Shop", link: "/shop" },
+                { text: "About Us", link: "/about" },
+                { text: "Services", link: "/services" },
+                { text: "Projects", link: "/projects" },
+                { text: "Contact Us", link: "/contact" },
               ].map((item, index) => {
                 return (
                   <li
-                  onClick={()=> setShowMenu(false)}
+                    onClick={() => setShowMenu(false)}
                     key={index}
                     className="pr-8 py-1 pl-4 hover:bg-gray-100 border-b border-gray-200"
                   >
-                    {item.text}
+                    <Link href={item.link}>{item.text}</Link>
                   </li>
                 );
               })}
@@ -66,34 +63,34 @@ const Header = () => {
         </div>
 
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <Image src="/logo.png" alt="logo" width={200} height={200} />
+        <div className="">
+          <Image src="/nkc logo .png" alt="logo" width={100} height={100} />
         </div>
         <div className="items-center relative group hidden md:flex">
           <p className="font-semibold menu">Explore Solar</p>
           <MdKeyboardArrowDown size={20} />
           <ul className="bg-white absolute top-full mt-2 w-[200px] p-2 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
             {[
-              { text: "Home" },
-              { text: "Shop" },
-              { text: "About Us" },
-              { text: "Services" },
-              { text: "Projects" },
-              { text: "Contact Us" },
+              { text: "Home", link: "/" },
+              { text: "Shop", link: "/shop" },
+              { text: "About Us", link: "/about" },
+              { text: "Services", link: "/services" },
+              { text: "Projects", link: "/projects" },
+              { text: "Contact Us", link: "/contact" },
             ].map((item, index) => {
               return (
                 <li
                   key={index}
                   className="pr-8 py-1 pl-4 hover:bg-gray-100 border-b border-gray-200"
                 >
-                  {item.text}
+                  <Link href={item.link}>{item.text}</Link>
                 </li>
               );
             })}
           </ul>
         </div>
         {/* Desktop Search Bar */}
-        <div className="hidden lg:flex flex-1 max-w-3xl mx-4 border-2 border-yellow-500 rounded-full overflow-hidden">
+        <div className="hidden lg:flex flex-1 max-w-3xl mx-4 border-2 border-primary rounded-full overflow-hidden">
           <input
             type="text"
             placeholder="Search for Products"
@@ -108,7 +105,7 @@ const Header = () => {
             <option>Panels</option>
             <option>Inverters</option>
           </select>
-          <button className="bg-yellow-500 cursor-pointer px-4 flex items-center justify-center text-white">
+          <button className="bg-primary cursor-pointer px-4 flex items-center justify-center text-white">
             <FaSearch />
           </button>
         </div>
@@ -132,7 +129,7 @@ const Header = () => {
           <div className="relative flex items-center space-x-1 cursor-pointer">
             <AiOutlineShoppingCart size={28} className="hover:scale-105" />
             <span className="text-sm font-medium hidden sm:inline">Rs 0</span>
-            <span className="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs px-1 rounded-full">
+            <span className="absolute -top-2 -right-2 bg-primary text-white text-xs px-1 rounded-full">
               0
             </span>
           </div>
@@ -150,7 +147,7 @@ const Header = () => {
               <FaTimes size={30} />
             </button>
             <h2 className="text-xl font-semibold mb-6">Search Products</h2>
-            <div className="border-2 border-yellow-500 rounded-full flex overflow-hidden">
+            <div className="border-2 border-primary rounded-full flex overflow-hidden">
               <input
                 type="text"
                 placeholder="Search for Products"
@@ -165,7 +162,7 @@ const Header = () => {
                 <option>Panels</option>
                 <option>Inverters</option>
               </select>
-              <button className="bg-yellow-500 px-2 flex cursor-pointer items-center justify-center text-white">
+              <button className="bg-primary px-2 flex cursor-pointer items-center justify-center text-white">
                 <FaSearch />
               </button>
             </div>

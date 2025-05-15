@@ -5,39 +5,67 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import Image from "next/image";
+import { Product } from "@/interfaces/Product";
 
-const inverters = [
+export const inverters: Product[] = [
   {
-    title: "SOFAR 1100~ 3300TL-G3 Series",
+    id: 1,
+    name: "SOFAR 1100~ 3300TL-G3 Series",
+    brand: "SOFAR",
+    model: "1100~3300TL-G3",
+    type: "On Grid Inverter",
+    price: 270000,
+    image: "/p2.jpeg",
+    category: "Inverter",
     desc: "On Grid Inverter, Sofar, Solar Inverter",
-    price: "Rs 270,000",
-    img: "/p2.jpeg",
   },
   {
-    title: "GOODWE Three Phase Inverter 10kW(G-3 Series)",
+    id: 2,
+    name: "GOODWE Three Phase Inverter 10kW(G-3 Series)",
+    brand: "GOODWE",
+    model: "10kW (G-3)",
+    type: "On Grid Inverter",
+    price: 205000,
+    image: "/p2.jpeg",
+    category: "Inverter",
     desc: "On Grid Inverter, Solar Inverter",
-    price: "Rs 205,000",
-    img: "/p2.jpeg",
   },
   {
-    title: "Solis 10kW On-Grid Solar Inverter with Wifi Dongle",
+    id: 3,
+    name: "Solis 10kW On-Grid Solar Inverter",
+    brand: "Solis",
+    model: "10kW",
+    type: "On Grid Inverter",
+    price: 203000,
+    image: "/p2.jpeg",
+    category: "Inverter",
     desc: "On Grid Inverter, Solar Inverter, Solis",
-    price: "Rs 203,000",
-    img: "/p2.jpeg",
   },
   {
-    title: "Solis 15kW 3P On-Grid Solar Inverter with Wifi Dongle",
+    id: 4,
+    name: "Solis 15kW 3P On-Grid Solar Inverter",
+    brand: "Solis",
+    model: "15kW 3P",
+    type: "On Grid Inverter",
+    price: 243000,
+    image: "/p2.jpeg",
+    category: "Inverter",
     desc: "On Grid Inverter, Solar Inverter, Solis",
-    price: "Rs 243,000",
-    img: "/p2.jpeg",
   },
   {
-    title: "Solis 20kW 3P On-Grid Solar Inverter with Wifi Dongle",
+    id: 5,
+    name: "Solis 20kW 3P On-Grid Solar Inverter",
+    brand: "Solis",
+    model: "20kW 3P",
+    type: "On Grid Inverter",
+    price: 305000,
+    image: "/p2.jpeg",
+    category: "Inverter",
     desc: "On Grid Inverter, Solar Inverter, Solis",
-    price: "Rs 305,000",
-    img: "/p2.jpeg",
   },
 ];
+
 
 
 export default function InverterSlider() {
@@ -47,14 +75,6 @@ export default function InverterSlider() {
         EcoSmart Inverters
       </h2>
 
-      {/* Tabs */}
-      {/* <div className="flex gap-4 mb-6 text-sm font-medium">
-        <button className="px-4 py-1 border border-yellow-400 text-yellow-600 rounded-full bg-yellow-100">
-          Top 20
-        </button>
-        <button className="text-gray-500 hover:text-black">On Grid Inverter</button>
-        <button className="text-gray-500 hover:text-black">Hybrid Inverter</button>
-      </div> */}
 
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
@@ -76,10 +96,10 @@ export default function InverterSlider() {
           <SwiperSlide key={index}>
             <div className="rounded hover:bg-white hover:shadow-md p-4 text-center h-[350px] mb-10 relative group">
               <p className="text-xs text-gray-500 mb-2">{item.desc}</p>
-              <h3 className="font-semibold text-sm text-blue-700 hover:underline mb-3">{item.title}</h3>
-              <img src="/p2.jpeg" alt={item.title} className="h-36 mx-auto mb-4 object-contain" />
+              <h3 className="font-semibold text-sm text-secondary hover:underline mb-3">{item.title}</h3>
+              <Image height={400} width={400} src={item.image} alt={item.name} className="h-36 mx-auto mb-4 object-contain" />
               <p className="text-lg font-semibold">{item.price}</p>
-              <button className="mt-2 absolute right-2 bottom-2 bg-gray-100 rounded-full w-8 h-8 flex items-center justify-center text-gray-500 group-hover:bg-yellow-500 group-hover:text-white">
+              <button className="mt-2 absolute right-2 bottom-2 bg-gray-100 rounded-full w-8 h-8 flex items-center justify-center text-gray-500 group-hover:bg-primary group-hover:text-white">
                 <AiOutlineShoppingCart/>
               </button>
             </div>

@@ -16,19 +16,19 @@ const Jumbotron = () => {
         {/* Left Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left mt-10 lg:mt-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-            Power Your Future With <span className="text-yellow-500">Solar Energy</span>
+            Power Your Future With <span className="text-primary">Solar Energy</span>
           </h1>
           <p className="text-gray-600 mt-6 md:text-lg text-sm ">
             Save money and the planet by switching to clean, renewable energy. Discover high-performance solar panels, inverters, and complete solutions at NKC Solar Energy.
           </p>
           <div className="mt-8 flex justify-center lg:justify-start space-x-4">
             <Link href="/shop">
-              <span className="px-6 py-2 md:py-3 bg-yellow-400 hover:bg-yellow-500 text-white font-medium rounded-full transition">
+              <span className="px-6 py-2 md:py-3 bg-primary hover:bg-primary text-white font-medium rounded-full transition">
                 Shop Now
               </span>
             </Link>
             <Link href="/contact">
-              <span className="px-6 py-2 md:py-3 border-2 border-yellow-400 text-yellow-500 hover:bg-yellow-100 font-medium rounded-full transition">
+              <span className="px-6 py-2 md:py-3 border-2 border-primary text-primary hover:bg-yellow-100 font-medium rounded-full transition">
                 Contact Us
               </span>
             </Link>

@@ -1,5 +1,8 @@
 @import "tailwindcss";
-
+@theme{
+  --color-primary:#F68931;
+  --color-secondary:#3B749D;
+}
 .swiper-pagination{
   bottom: 0;
 }
@@ -14,7 +17,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #facc15 !important; /* yellow-400 */
+  background-color: var(--color-primary) !important; /* yellow-400 */
   width: 24px !important;
   border-radius: 9999px;
 }

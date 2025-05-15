@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import React from 'react';
-import { BiArrowToRight } from 'react-icons/bi';
 import { BsArrowRight } from 'react-icons/bs';
 
 
@@ -15,9 +14,9 @@ const PromoProducts = () => {
         <div className="">
           <h3 className="text-xs md:text-sm font-light text-gray-500">JINKO TIGER</h3>
           <h2 className="text-base md:text-lg font-semibold text-gray-800 leading-tight">N-TYPE<br />MONO-FACIAL<br />SOLAR PANEL</h2>
-          <div className="mt-2 text-sm font-bold text-black flex items-center justify-end gap-1">
+          <div className="mt-2 text-sm font-bold text-black flex items-center justify-end gap-1 cursor-pointer">
             Shop Now
-        <BiArrowToRight size={14} className="text-yellow-400" />
+        <BsArrowRight size={18} className="text-primary" />
           </div>
         </div>
       </div>
@@ -33,7 +32,7 @@ const PromoProducts = () => {
           <div className="mt-2 text-sm font-medium text-gray-500">FROM</div>
           <div className="text-2xl font-bold text-gray-800 flex items-center justify-end gap-1">
             Rs230K
-            <BsArrowRight size={18} className="text-yellow-400" />
+            <BsArrowRight size={18} className="text-primary" />
           </div>
         </div>
       </div>

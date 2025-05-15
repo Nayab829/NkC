@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <div className="">
       {/* Newsletter Sign Up */}
-      <div className="bg-yellow-400 text-gray-900">
+      <div className="bg-primary text-gray-900">
         <div className="max-w-7xl mx-auto  px-6 py-6  flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <BsSend size={30} />
@@ -61,7 +61,7 @@ const Footer = () => {
       {/* Footer Main Content */}
       <div className="px-6 md:px-16 lg:px-24 xl:px-32 flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-gray-500">
         <div>
-          <img className="w-34 md:w-32" src="/logo.png" alt="logo" />
+          <img className="w-34 md:w-32" src="/nkc logo .png" alt="logo" />
           <p className="max-w-[410px] mt-6">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum unde
             quaerat eveniet cumque accusamus atque qui error quo enim fugiat?
@@ -76,7 +76,7 @@ const Footer = () => {
               <ul className="text-sm space-y-1">
                 {section.links.map((link, i) => (
                   <li key={i}>
-                    <a href="#" className="hover:text-yellow-500 transition">
+                    <a href="#" className="hover:text-primary  transition">
                       {link}
                     </a>
                   </li>

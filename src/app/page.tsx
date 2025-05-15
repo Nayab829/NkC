@@ -6,9 +6,9 @@ import Footer from "./shared/footer";
 export default function Home() {
   return (
     <div>
-      <Header/>
+      
       <Jumbotron/>
-      <Footer/>
+      
     </div>
   );
 }

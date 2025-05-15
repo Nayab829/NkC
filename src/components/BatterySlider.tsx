@@ -8,54 +8,66 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Image from "next/image";
+import { Product } from "@/interfaces/Product";
 
-const batteries = [
+export const batteries: Product[] = [
   {
+    id: 1,
+    name: "Phoenix TX 3500",
     brand: "Phoenix",
     model: "TX 3500",
     type: "Tubular Battery",
     capacity: "280 AH",
-    price: "Rs 64,500",
-    img: "/p3.png",
+    price: 64500,
+    image: "/p3.png",
     category: "Tubular Battery",
   },
   {
+    id: 2,
+    name: "Phoenix TX 3000",
     brand: "Phoenix",
     model: "TX 3000",
     type: "Tubular Battery",
     capacity: "245 AH",
-    price: "Rs 60,000",
-    img: "/p3.png",
+    price: 60000,
+    image: "/p3.png",
     category: "Lithium-ion Battery",
   },
   {
+    id: 3,
+    name: "Phoenix TX 2500",
     brand: "Phoenix",
     model: "TX 2500",
     type: "Tubular Battery",
     capacity: "230 AH",
-    price: "Rs 51,000",
-    img: "/p3.png",
+    price: 51000,
+    image: "/p3.png",
     category: "Tubular Battery",
   },
   {
+    id: 4,
+    name: "Phoenix TX 1800",
     brand: "Phoenix",
     model: "TX 1800",
     type: "Tubular Battery",
     capacity: "185 AH",
-    price: "Rs 39,500",
-    img: "/p3.png",
+    price: 39500,
+    image: "/p3.png",
     category: "Tubular Battery",
   },
   {
+    id: 5,
+    name: "OSAKA TA-1800",
     brand: "OSAKA",
     model: "TA-1800",
     type: "Tubular UPS & Solar Battery",
     capacity: "N/A",
-    price: "Rs 56,500",
-    img: "/p3.png",
+    price: 56500,
+    image: "/p3.png",
     category: "Lithium-ion Battery",
   },
 ];
+
 
 const BatterySlider = () => {
   const tabs = ["Top 20", "Tubular Battery", "Lithium-ion Battery"];
@@ -79,8 +91,8 @@ const BatterySlider = () => {
             onClick={() => setActiveTab(tab)}
             className={`px-3 w-fit md:px-4 py-1 rounded-full text-xs md:text-sm cursor-pointer  outline-none ${
               activeTab === tab
-                ? "bg-yellow-400 text-white"
-                : "bg-transparent text-gray-700 hover:text-yellow-500"
+                ? "bg-primary text-white"
+                : "bg-transparent text-gray-700 hover:text-yellow-700"
             }`}
           >
             {tab}
@@ -108,12 +120,12 @@ const BatterySlider = () => {
         {filtered.map((battery, index) => (
           <SwiperSlide key={index}>
             <div className="bg-white rounded-2xl hover:shadow-xl shadow p-4 text-center w-full h-full flex flex-col items-center relative group mb-10">
-              <div className="text-sm font-semibold text-blue-700 mb-1">
+              <div className="text-sm font-semibold text-secondary mb-1">
                 {battery.brand}, {battery.model}, {battery.capacity}
               </div>
               <Image
-                src={battery.img}
-                alt={battery.model}
+                src={battery.image}
+                alt={battery.name}
                 height={400}
                 width={400}
                 className="w-40 h-28 object-contain mb-3"
@@ -122,7 +134,7 @@ const BatterySlider = () => {
               <div className="text-lg font-bold text-gray-800">
                 {battery.price}
               </div>
-              <button className="mt-2 absolute right-2 bottom-2 bg-gray-100 rounded-full w-8 h-8 flex items-center justify-center text-gray-500 group-hover:bg-yellow-500 group-hover:text-white cursor-pointer">
+              <button className="mt-2 absolute right-2 bottom-2 bg-gray-100 rounded-full w-8 h-8 flex items-center justify-center text-gray-500 group-hover:bg-primary group-hover:text-white cursor-pointer">
                 <AiOutlineShoppingCart />
               </button>
             </div>
