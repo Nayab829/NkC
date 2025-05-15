@@ -10,7 +10,7 @@ import { FaFilter } from "react-icons/fa6";
 
 
 
-export const products: Product[] = [
+const products: Product[] = [
   {
     id: 1,
     name: "Canadian Solar HiKu 590W Solar Panel",
