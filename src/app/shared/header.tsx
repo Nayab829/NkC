@@ -43,9 +43,9 @@ const Header = () => {
               {[
                 { text: "Home", link: "/" },
                 { text: "Shop", link: "/shop" },
-                { text: "About Us", link: "/about" },
+                { text: "About Us", link: "/about-us" },
                 { text: "Services", link: "/services" },
-                { text: "Projects", link: "/projects" },
+                // { text: "Projects", link: "/projects" },
                 { text: "Contact Us", link: "/contact-us" },
               ].map((item, index) => {
                 return (
@@ -69,13 +69,13 @@ const Header = () => {
         <div className="items-center relative group hidden md:flex">
           <p className="font-semibold menu">Explore Solar</p>
           <MdKeyboardArrowDown size={20} />
-          <ul className="bg-white absolute top-full mt-2 w-[200px] p-2 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+          <ul className="bg-white absolute top-full mt-2 w-[200px] p-2 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-40">
             {[
               { text: "Home", link: "/" },
               { text: "Shop", link: "/shop" },
-              { text: "About Us", link: "/about" },
+              { text: "About Us", link: "/about-us" },
               { text: "Services", link: "/services" },
-              { text: "Projects", link: "/projects" },
+              // { text: "Projects", link: "/projects" },
               { text: "Contact Us", link: "/contact-us" },
             ].map((item, index) => {
               return (

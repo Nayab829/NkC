@@ -1,33 +1,40 @@
+import Link from "next/link";
 import { BsSend } from "react-icons/bs";
 
 const Footer = () => {
-  const linkSections = [
-    {
-      title: "Explore Solar",
-      links: [
-        "Home",
-        "About",
-        "Offers & Deals",
-        "Terms and Condtions",
-        "Contact Us",
-        "FAQs",
-      ],
-    },
-    {
-      title: "Solar Essentials",
-      links: [
-        "Solar Panels",
-        "Solar Inverters",
-        "Batteries",
-        "Charge Controllers",
-        "Electrical Accessories",
-      ],
-    },
-    {
-      title: "Follow Us",
-      links: ["Instagram", "Twitter", "Facebook", "YouTube"],
-    },
-  ];
+ const linkSections = [
+  {
+    title: "Explore Solar",
+    links: [
+      { name: "Home", href: "/" },
+      { name: "About", href: "/about" },
+      { name: "Offers & Deals", href: "/offers" },
+      { name: "Terms and Conditions", href: "/terms-and-conditions" },
+      { name: "Contact Us", href: "/contact" },
+      { name: "FAQs", href: "/faqs" },
+    ],
+  },
+  {
+    title: "Solar Essentials",
+    links: [
+      { name: "Solar Panels", href: "/products/solar-panels" },
+      { name: "Solar Inverters", href: "/products/inverters" },
+      { name: "Batteries", href: "/products/batteries" },
+      { name: "Charge Controllers", href: "/products/charge-controllers" },
+      { name: "Electrical Accessories", href: "/products/accessories" },
+    ],
+  },
+  {
+    title: "Follow Us",
+    links: [
+      { name: "Instagram", href: "https://www.instagram.com/" },
+      { name: "Twitter", href: "https://www.twitter.com/" },
+      { name: "Facebook", href: "https://www.facebook.com/" },
+      { name: "YouTube", href: "https://www.youtube.com/" },
+    ],
+  },
+];
+
 
   return (
     <div className="">
@@ -76,9 +83,9 @@ const Footer = () => {
               <ul className="text-sm space-y-1">
                 {section.links.map((link, i) => (
                   <li key={i}>
-                    <a href="#" className="hover:text-primary  transition">
-                      {link}
-                    </a>
+                    <Link href={link.href} className="hover:text-primary  transition">
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
